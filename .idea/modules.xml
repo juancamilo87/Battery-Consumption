@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/BatteryConsumption.iml" filepath="$PROJECT_DIR$/BatteryConsumption.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Battery-Consumption.iml" filepath="$PROJECT_DIR$/Battery-Consumption.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>
