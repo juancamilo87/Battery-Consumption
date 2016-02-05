@@ -13,16 +13,26 @@
         android:theme="@style/Theme.Aware"
         tools:replace="android:icon, android:theme">
 
-        <activity android:name=".MainActivity">
+        <service
+            android:name="com.aware.plugin.batteryconsumption.Plugin"
+            android:exported="true" />
+        <activity
+            android:name="com.aware.plugin.batteryconsumption.Settings"
+            android:exported="true"
+            android:theme="@style/Theme.Aware" />
+        <provider
+            android:name="com.aware.plugin.batteryconsumption.Provider"
+            android:authorities="com.aware.plugin.batteryconsumption.provider.batteryconsumption"
+            android:writePermission="com.aware.WRITE_CONTEXT_DATA"
+            android:exported="true"
+            android:readPermission="com.aware.READ_CONTEXT_DATA" />
+
+        <receiver android:name=".Plugin$BatteryReader">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
+                <action android:name="ACTION_AWARE_PLUGIN_BATTERY_CONSUMPTION_READ"/>
             </intent-filter>
-        </activity>
 
-        <service android:name="com.aware.plugin.batteryconsumption.Plugin" android:exported="true" />
-        <activity android:name="com.aware.plugin.batteryconsumption.Settings" android:exported="true" android:theme="@style/Theme.Aware" />
+        </receiver>
 
     </application>
 

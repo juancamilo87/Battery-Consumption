@@ -11,4 +11,12 @@
         android:persistent="true"
         android:summary="Activate/deactivate plugin" />
 
+    <EditTextPreference
+        android:defaultValue="1000"
+        android:key="frequency_plugin_battery_consumption"
+        android:persistent="true"
+        android:summary="Every 1000 milliseconds"
+        android:title="How frequently to sample battery (in ms)"
+        android:inputType="numberDecimal" />
+
 </PreferenceScreen>
